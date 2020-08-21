@@ -50,6 +50,9 @@
     .tutorial__item {
         padding: 0 5px;
     }
+    .product__item-price {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 1150px) {
@@ -206,6 +209,10 @@
         .product__item {
             max-width: 100%;
         }
+    }
+    .product__item-title {
+        font-size: 15px;
+        max-width: 190px;
     }
 }
 
@@ -371,6 +378,45 @@
     .footer__inner {
         padding-top: 30px;
     }
+    .product__item-title {
+        font-size: 13px;
+        max-width: 170px;
+    }
+    .product__item-price {
+        font-size: 15px;
+    }
+    #modal-1,
+    #modal-2,
+    #modal-3,
+    #modal-4,
+    #modal-5,
+    #modal-6,
+    #modal-7,
+    #modal-8,
+    #modal-9,
+    #modal-10,
+    #modal-11,
+    #modal-12,
+    #modal-13,
+    #modal-14,
+    #modal-15 {
+        .fancybox-content {
+            padding: 25px;
+        }
+        .price__input {
+            padding: 20px 10px;
+        }
+        .price__span {
+            font-size: 13px;
+        }
+        .price__title {
+            font-size: 18px;
+        }
+        .price__text {
+            font-size: 12px;
+        }
+    }
+      
 }
 
 @media (min-width: 1000px) {
