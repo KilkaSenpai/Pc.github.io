@@ -342,6 +342,7 @@
 
             &:hover {
                 background: rgb(0, 204, 255);
+                box-shadow: rgb(0, 204, 255) 0px 1px 1px inset, rgb(0, 204, 255) 0px 0px 8px;
             }
         }
     }
@@ -418,7 +419,7 @@
 }
 
 .product-slider {
-    padding: 0px 0 120px;
+    padding: 0px 0 40px;
 
     .slick-slide .product__item {
         max-width: 1000px !important;
@@ -431,13 +432,14 @@
     }
 
     .product-slider__box {
-        display: flex;
-        justify-content: space-between;
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
         margin-top: 30px;
+        text-align: center;
     }
 
     .product-slider__box-text {
-        max-width: 500px;
         @include f700;
     }
 
@@ -468,6 +470,7 @@
             }
         }
     }
+
     .product__item-img {
         min-height: 250px;
         background-repeat: no-repeat;
@@ -525,6 +528,7 @@
         &:hover {
             background-color: $btn;
             color: #000;
+            box-shadow: rgb(0, 204, 255) 0px 1px 1px inset, rgb(0, 204, 255) 0px 0px 8px;
         }
     }
 }
@@ -595,6 +599,12 @@
     color: #707070;
     max-width: 240px;
 }
+.contact__info-content--color {
+    transition: all .3s;
+    &:hover {
+        color: $btn;
+    }
+}
 
 .contact__form-title {
     margin-bottom: 25px;
@@ -612,7 +622,7 @@
     width: 100%;
 
     input {
-        border: none;
+        border: 3px solid transparent;
         display: block;
         height: 43px;
         padding-left: 17px;
@@ -623,7 +633,7 @@
 
         &:focus {
             outline: none;
-            border: solid $btn;
+            border: 3px solid $btn;
             border-radius: 3px;
         }
 
@@ -634,7 +644,7 @@
     }
 
     textarea {
-        border: none;
+        border: 3px solid transparent;
         padding: 13px 17px;
         height: 190px;
         background-color: #f1f4f5;
@@ -645,7 +655,7 @@
 
         &:focus {
             outline: none;
-            border: solid $btn;
+            border: 3px solid $btn;
             border-radius: 3px;
         }
 
@@ -669,7 +679,8 @@
         transition: all .3s;
 
         &:hover {
-            background-color: #4f71ce;
+            background-color: $btn;
+            box-shadow: rgb(0, 204, 255) 0px 1px 1px inset, rgb(0, 204, 255) 0px 0px 8px;
         }
     }
 }
@@ -702,7 +713,7 @@
         font-size: 22px;
         color: #fff;
         padding-bottom: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         position: relative;
 
         &::after {
@@ -727,11 +738,11 @@
     @include f500;
     font-weight: 700;
     color: #fff;
-    padding-left: 30px;
+    padding-left: 25px;
     position: relative;
 
     &::before {
-        content: "\f041";
+        content: "\e948";
         position: absolute;
         left: 0;
         font-family: 'icomoon';
@@ -740,8 +751,14 @@
     }
 
     &-phone {
+        transition: all .3s;
+
         &::before {
-            content: "\f095";
+            content: "\e942";
+        }
+
+        &:hover {
+            color: $btn;
         }
     }
 }
@@ -751,9 +768,14 @@
         margin-bottom: 13px;
         padding-left: 22px;
         position: relative;
+        transition: all .3s;
+
+        &:hover {
+            color: #fff;
+        }
 
         &::before {
-            content: "\f105";
+            content: "\e901";
             font-family: 'icomoon';
             color: $btn;
             font-size: 18px;
@@ -764,37 +786,51 @@
 }
 
 .footer__social-link {
-    margin-bottom: 33px;
+    margin-bottom: 45px;
 
     li {
         display: inline-block;
 
         &+li {
-            margin-left: 7px;
+            margin-left: 50px;
         }
     }
+}
 
-    a {
-        width: 28px;
-        height: 28px;
-        background-image: url(../images/icons/css_sprites.png);
+.link-whatsapp {
+    &:hover {
+        &::before {
+            color: #43d854;
+            transform: rotateY(360deg);
+        }
     }
 }
 
-.link-twitter {
-    background-position: -28px 0;
+.link-instagram {
+    &:hover {
+        &::before {
+            color: rgb(221, 42, 123);
+            transform: rotateY(360deg);
+        }
+    }
 }
 
-.link-youtube {
-    background-position: 0 -28px;
+
+.link-instagram::before,
+.link-whatsapp::before {
+    transition: all .6s linear;
+    position: absolute;
+    color: $btn;
+    font-size: 30px;
+    font-family: 'icomoon';
 }
 
-.link-pinterest {
-    background-position: -28px -28px;
+.link-whatsapp::before {
+    content: "\ea93";
 }
 
-.link-linledin {
-    background-position: -56px 0;
+.link-instagram::before {
+    content: "\ea92";
 }
 
 .footer__form-title {
@@ -820,9 +856,20 @@
         &::placeholder {
             color: #697378;
         }
+
+        &:focus {
+            box-shadow: rgb(0, 204, 255) 0px 1px 1px inset, rgb(0, 204, 255) 0px 0px 8px;
+            outline: none;
+        }
     }
 
     button {
+        transition: all .3s;
+
+        &:hover {
+            box-shadow: rgb(0, 204, 255) 0px 1px 1px inset, rgb(0, 204, 255) 0px 0px 8px;
+        }
+
         position: absolute;
         bottom: 0;
         right: 0;
@@ -834,7 +881,7 @@
 
         &::before {
             position: absolute;
-            content: "\f124";
+            content: "\e949";
             font-family: 'icomoon';
             color: #fff;
             font-size: 20px;
