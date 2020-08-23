@@ -622,7 +622,7 @@
     width: 100%;
 
     input {
-        border: 3px solid transparent;
+        border: 1px solid $btn;
         display: block;
         height: 43px;
         padding-left: 17px;
@@ -630,11 +630,11 @@
         background-color: #f1f4f5;
         width: 350px;
         margin-bottom: 30px;
+        border-radius: 3px;
 
         &:focus {
             outline: none;
-            border: 3px solid $btn;
-            border-radius: 3px;
+            box-shadow: rgb(0, 204, 255) 0px 1px 1px inset, rgb(0, 204, 255) 0px 0px 8px;
         }
 
         &::placeholder {
@@ -644,7 +644,7 @@
     }
 
     textarea {
-        border: 3px solid transparent;
+        border: 1px solid $btn;
         padding: 13px 17px;
         height: 190px;
         background-color: #f1f4f5;
@@ -652,11 +652,11 @@
         display: block;
         resize: none;
         margin-bottom: 23px;
+        border-radius: 3px;
 
         &:focus {
             outline: none;
-            border: 3px solid $btn;
-            border-radius: 3px;
+            box-shadow: rgb(0, 204, 255) 0px 1px 1px inset, rgb(0, 204, 255) 0px 0px 8px;
         }
 
         &::placeholder {
@@ -677,6 +677,7 @@
         width: 190px;
         cursor: pointer;
         transition: all .3s;
+        border-radius:3px;
 
         &:hover {
             background-color: $btn;
